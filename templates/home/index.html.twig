@@ -1,7 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Acceuil{% endblock %}
 
-{% block body %}
-c'est l'aceuil
-{% endblock %}
+
+    {% block mainContent %}
+        <div class="main-content d-flex">
+            <div class="card">
+                <img class="card-img-top" src="" alt="Card image cap">
+            </div>
+
+            <div class="card-body">
+                <p class="card-text">je suis un text</p>
+            </div>
+        </div>
+    {% endblock %}
+

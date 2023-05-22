@@ -14,6 +14,50 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        {% block body %}
+            {% block header %}    
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+                   
+                <a class="navbar-brand" href="{{ path('app_home')}}">
+                <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+                Le super blog
+                </a>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ path('app_home')}}">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('app_home')}}">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            {# <div class="dropdown-menu" aria-labelledby="navbarDropdown"> #}
+                            <a class="nav-link" href="{{ path('app_home')}}">Inscrption</a>
+                            {# <a class="dropdown-item" href="#"></a> #}
+                        </li>
+
+                        <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_home')}}">Déconnexion</a>
+                        </li>
+
+                        <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_home')}}">Connexion</a>
+                        </li>
+
+                    </ul>
+                    
+                    <form class="form-inline my-2 my-lg-0 d-flex flex-row">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
+                    </form>
+                </div>
+            </nav>
+            {% endblock %}
+
+            {% block mainContent %}
+            {% endblock %}
+        {% endblock %}
     </body>
 </html>
