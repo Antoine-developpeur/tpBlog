@@ -37,8 +37,8 @@ class Article
     #[ORM\Column(length: 255)]
     private ?string $images = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $tag = null;
+    #[ORM\Column]
+    private array $tag = [];
 
     #[ORM\Column(length: 255)]
     private ?string $titreImages = null;
@@ -149,16 +149,18 @@ class Article
         return $this;
     }
 
-    public function getTag(): ?string
+    public function getTag(): array
     {
         return $this->tag;
+        
     }
 
-    public function setTag(string $tag): self
+    public function setTag(array $tag): self
     {
         $this->tag = $tag;
 
         return $this;
+        
     }
 
     public function getTitreImages(): ?string
