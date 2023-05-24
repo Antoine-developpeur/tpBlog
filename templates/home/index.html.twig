@@ -6,16 +6,16 @@
     {% block mainContent %}
         {% for article in articles %}
             <div class="main-content d-flex">
-                <a href="#" class="d-flex flex-row">
+                <a href="{{ path('app_home' , { id : article.id}) }}" class="d-flex flex-row">
 
                 <div class="card raju">
-                    <img class="card-img-top" src="{{article.images}}" alt="{{article.titreImages}}">
+                    <img class="card-img-top" src="{{ asset('build/images/'~ article.images) }}" alt="{{article.titreImages}}">
                 </div>
 
                 <div class="card-body">
                     <h5 class="card-title">{{article.titre}}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">{{article.phraseAcroche}}</h6>
-                    <p class="card-text">{{article.contenue}}</p>
+                    <p class="card-text cut">{{article.contenue}}</p>
                 </div>
 
                 </a>

@@ -15,8 +15,9 @@ class HomeController extends AbstractController
     {
         $articles = $entityManager->getRepository(Article::class)->findAll();
 
+
         return $this->render('home/index.html.twig',[
-        'articles'=>$articles
+        'articles'=>$articles,
         ]);
     }
 
